@@ -1,0 +1,418 @@
+/*!
+ * Based on Bootstrap v3.3.1 
+ */
+
+// Core
+
+@import "../bower_components/bootstrap/less/bootstrap.less";
+
+@accent-color:                   #27a4d9;
+
+@gray-divider:                  rgba(0,0,0,.12);
+@gray-subtitle:                 rgba(0,0,0,.54);
+@gray-text:                     rgba(0,0,0,.87);
+@gray-bg:                       #f3f3f4;
+@gray-nav:                      #333333;
+@gray-subnav:                   #444545;
+
+
+@brand-primary: @accent-color;
+
+@zindex-sub-navbar:       900;
+
+@font-size-base:          13px;
+
+
+
+//helpers ==================================================================
+.reset{
+  margin: 0;
+  padding: 0;
+}
+
+//general stuff ==================================================================
+
+body{
+  margin-top: 50px;
+  color: @gray-text;
+  background: @gray-bg;
+    @media (max-width: @screen-xs-max) {
+      margin-top: 80px;
+    }
+  &.detail{
+    @media (max-width: @screen-xs-max) {
+      margin-top: 50px;
+    }
+  }
+}
+
+.alt{
+  color: @gray-subtitle;
+  font-size: @font-size-h6;
+ }
+
+
+section, footer{
+  padding: 20px 0;
+}
+
+
+
+//Login ==================================================================
+
+.login{
+  text-align: center!important;
+  margin-top: -80px;
+  @media (min-width: @screen-sm-min) {
+    margin-top: 0;
+  }
+  
+  .store-icon{
+    margin-top: 3px;
+  }// store icon
+  
+  h5{
+    border-top: 1px solid @gray-divider;
+    padding: 10px 0 0 0;
+    margin: 10px;
+  }//h5
+  
+  
+  button{
+    margin-bottom: 3px;
+    display: block;
+    width: 100%;
+
+    @media (min-width: @screen-sm-min) {
+      display: inline;
+      width: auto;
+    }
+
+  }//button
+  
+  
+}//login
+
+
+//NavBar ==================================================================
+
+@navbar-inverse-bg:  @gray-nav;
+
+
+.navbar-brand {
+  font-size: @font-size-base;
+//  background: red;
+  padding-left: @grid-gutter-width/2+48px;
+  position: relative;
+  img{
+    display: inline-block;
+    max-height: 36px;
+    position: absolute;
+    top: 7px;
+    left: @grid-gutter-width/2;
+  }
+  i{
+    visibility: hidden;
+    color:  rgba(255,255,255,.5);
+  }
+  
+  &:hover{
+    color: #fff;
+    text-decoration: none;
+    i{
+      visibility: visible;
+    }//i
+  }//hover
+  
+  &.navbar-back{
+    .hidden-sm;
+    .hidden-md;
+    .hidden-lg;
+    padding-left: @grid-gutter-width/2;
+    i{
+      visibility: visible;
+    }
+  }
+  
+
+}
+
+
+.content-box{
+    padding: @grid-gutter-width/2;
+    border-radius: 2px;
+    border: 1px solid @gray-divider;
+    box-shadow: 0 0 5px @gray-divider;
+    background: #fff;
+}
+
+//app-list ==================================================================
+
+
+
+.app-library {
+  @media (min-width: @screen-sm-min){
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  margin-left: -@grid-gutter-width;
+}
+
+}
+
+.app-col {
+  
+  @media (min-width: @screen-sm-min){
+    width: 25%;
+    padding-left: @grid-gutter-width;
+  }
+  @media (min-width: @screen-md-min){
+    width: 33.33333%;
+  }
+
+}
+
+
+.app-list{
+  @media (min-width: @screen-sm-min){
+    background: @gray-bg;
+  }
+}
+
+.app-item{
+  background: #fff;
+  border-bottom: 1px solid @gray-divider;
+  padding: @grid-gutter-width/4 @grid-gutter-width/2;
+
+  .clearfix();
+  &:hover{
+    background: @accent-color;
+    color: #fff;
+    cursor: pointer;
+    .alt{color: rgba(255,255,255,.7)}
+  }
+
+
+  @media (max-width: @screen-xs-max){
+      margin: 0 -@grid-gutter-width/2;
+    }
+
+  @media (min-width: @screen-sm-min){
+    .content-box;
+    margin-bottom: @grid-gutter-width;
+  }
+}
+
+
+
+
+
+.app-icon{  
+  float: left;
+  width: 64px;
+
+  @media (min-width: @screen-md-min){
+    width: 30%;
+  }
+
+  @media (min-width: @screen-lg-min){
+    width: 40%;
+  }
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    margin-bottom: 10px;
+    float: none;
+    width: auto;
+  }
+  
+  img{
+    width: 100%;
+    display: block;
+  }//img
+}//app icon
+
+.app-desc{
+  margin-left: 84px;
+  
+  @media (min-width: @screen-sm-min){
+    margin-left: 0; 
+     }
+  
+  @media (min-width: @screen-md-min){
+    margin-left: 35%; 
+     }
+
+  @media (min-width: @screen-lg-min){
+    margin-left: 45%; 
+     }
+  
+  .alt{
+    margin-bottom: 3px;
+  }
+  h4{
+    margin-bottom: 5px;
+    @media (min-width: @screen-sm-min){
+      margin: 0 0 5px 0;  
+    }
+
+  }
+  p:last-child{
+    margin: 0;
+    display: none;
+    @media (min-width: @screen-sm-min){
+     display: block;
+    }
+
+  }
+}
+
+
+//Search ==================================================================
+
+.app-search{
+  background: @gray-subnav;
+  padding: 10px 0;
+    .form-group{
+      margin: 0;
+      padding: 0;
+    }
+    input{
+      margin: 0;
+      padding: 0;
+    }
+
+  @media (max-width: @screen-xs-max) {
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  z-index: @zindex-sub-navbar;
+  }
+}
+
+
+//app-detail ==================================================================
+
+
+.app-detail{
+  background: @gray-bg;
+  .support{
+    ul{
+      .list-unstyled;
+      li{
+        padding: 5px 0;
+      }//li
+    }//ul
+  }//support
+  
+  @media (max-width: @screen-xs-max) {
+    h3{
+        font-size: ceil((@font-size-base * 1.25));
+      }
+    }
+  
+  .app-icon{  
+    width: 100%;
+    img{
+      width: 100%;
+      display: block;
+    }//img
+  }//app icon
+
+
+  .app-header{
+    border-bottom: 1px solid @gray-divider;
+    padding-bottom: @grid-gutter-width/2;
+    
+    @media (max-width: @screen-xs-max) {
+      h1{
+        font-size: ceil((@font-size-base * 1.25));
+        margin-top: 0;
+      }
+    }
+    
+    h1{
+      margin-bottom: 5px;
+    }//h1
+    
+    h5{
+      margin:15px 0 5px 0;
+    }//h5
+
+
+    
+    ul{.list-unstyled;}
+     li{
+      padding: 5px 0;
+      i{ color: @gray-subtitle;}//i
+      }
+
+    @media (min-width: @screen-md-min){
+        ul{.list-inline;}
+      } 
+
+    
+  }//app header 
+
+
+  .side-info{
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 70px;
+  }//side-info
+
+  
+  .install-info{
+    .content-box;
+    h3{
+      margin-top: 0;
+    }//h3
+    
+    h5{
+      margin: 20px 0 5px 0;
+    }
+    
+    a{
+      display: block;
+    }
+
+    @media (min-width: @screen-sm-min){
+        a{padding: 5px 0;}
+      } 
+    
+    @media (min-width: @screen-md-min){
+        a{padding: 3px 0;}
+      } 
+    
+  }//install-info
+
+  .qr{
+    margin: 15px 0 20px 0;
+    img{
+      width: 100%;
+    }//img
+  }//qr
+  
+}
+
+//Footer ==================================================================
+
+footer{
+//  background: @gray-subtitle;
+  border-top: 1px solid @gray-divider;
+  a{
+    &:hover{
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
