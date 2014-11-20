@@ -5676,7 +5676,7 @@ footer {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: left;
     margin-left: -30px;
   }
 }
