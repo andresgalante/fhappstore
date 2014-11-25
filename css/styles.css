@@ -2099,7 +2099,7 @@ select[multiple].form-group-lg .form-control {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #333333;
+  color: #ffffff;
   text-decoration: none;
 }
 .btn:active,
@@ -2120,9 +2120,9 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
-  border-color: #cccccc;
+  color: #ffffff;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -2130,9 +2130,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(224, 224, 224, 0.7);
 }
 .btn-default:active,
 .btn-default.active,
@@ -2157,12 +2157,12 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: #ffffff;
-  border-color: #cccccc;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
 }
 .btn-default .badge {
-  color: #ffffff;
-  background-color: #333333;
+  color: transparent;
+  background-color: #ffffff;
 }
 .btn-primary {
   color: #ffffff;
@@ -5589,30 +5589,56 @@ section,
 footer {
   padding: 20px 0;
 }
-.login {
-  text-align: center!important;
-  margin-top: -80px;
+html {
+  height: 100%;
+}
+.welcome {
+  background-image: -webkit-linear-gradient(top, #555555 0%, #222222 100%);
+  background-image: -o-linear-gradient(top, #555555 0%, #222222 100%);
+  background-image: linear-gradient(to bottom, #555555 0%, #222222 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff555555', endColorstr='#ff222222', GradientType=0);
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+.welcome section {
+  padding-top: 20px;
 }
 @media (min-width: 768px) {
-  .login {
-    margin-top: 0;
+  .welcome section {
+    padding-top: 60px;
   }
 }
-.login .store-icon {
-  margin-top: 3px;
+.welcome p {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
-.login h5 {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 10px 0 0 0;
-  margin: 10px;
+.welcome h5 {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 20px 0 0px 0;
+  margin: 20px;
 }
-.login button {
-  margin-bottom: 3px;
+.welcome button {
+  padding: 10px 16px;
+  font-size: 17px;
+  line-height: 1.33;
+  border-radius: 6px;
+  margin: 0 5px 10px 5px;
   display: block;
   width: 100%;
 }
+.welcome button i {
+  margin-right: 5px;
+}
+.welcome button:hover {
+  border: 1px solid #fff;
+}
 @media (min-width: 768px) {
-  .login button {
+  .welcome button {
     display: inline;
     width: auto;
   }
@@ -5929,4 +5955,59 @@ footer {
 footer a:hover {
   color: #fff;
   text-decoration: none;
+}
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+  -webkit-animation: fadeIn ease-in 1;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.fade-in.one {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.fade-in.two {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.fade-in.three {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }

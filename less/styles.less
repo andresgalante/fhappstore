@@ -15,12 +15,20 @@
 @gray-nav:                      #333333;
 @gray-subnav:                   #444545;
 
+@white-divider:                  rgba(255,255,255,.12);
+@white-subtitle:                 rgba(255,255,255,.70);
+
 
 @brand-primary: @accent-color;
 
 @zindex-sub-navbar:       900;
 
 @font-size-base:          13px;
+
+
+@btn-default-color:              #fff;
+@btn-default-bg:                 transparent;
+@btn-default-border:             @white-subtitle;
 
 
 
@@ -33,6 +41,7 @@
 //general stuff ==================================================================
 
 body{
+//  -webkit-transition: all 2s ease;
   margin-top: 50px;
   color: @gray-text;
   background: @gray-bg;
@@ -60,38 +69,52 @@ section, footer{
 
 //Login ==================================================================
 
-.login{
-  text-align: center!important;
-  margin-top: -80px;
-  @media (min-width: @screen-sm-min) {
-    margin-top: 0;
+html{height: 100%;}
+
+.welcome{
+  #gradient > .vertical(#555; #222);
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  section{
+    padding-top: 20px;
+    @media (min-width: @screen-sm-min) {
+     padding-top: 60px;
+    }
   }
   
-  .store-icon{
-    margin-top: 3px;
-  }// store icon
+  p{
+    color: @white-subtitle;
+    .fade-in.one
+  }
   
   h5{
-    border-top: 1px solid @gray-divider;
-    padding: 10px 0 0 0;
-    margin: 10px;
+    border-top: 1px solid @white-divider;
+    padding: 20px 0 0px 0;
+    margin: 20px;
   }//h5
   
-  
   button{
-    margin-bottom: 3px;
+    .btn-lg;
+    margin: 0 5px 10px 5px;
     display: block;
     width: 100%;
-
+    i{
+      margin-right: 5px;
+    }
+    &:hover{border: 1px solid #fff;}
+    
+    
     @media (min-width: @screen-sm-min) {
       display: inline;
       width: auto;
     }
+    
+    
+  } //btn 
 
-  }//button
-  
-  
-}//login
+}
 
 
 //NavBar ==================================================================
@@ -415,4 +438,47 @@ footer{
 }
 
 
+
+
+
+
+
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.5s;
+-moz-animation-delay: 0.5s;
+animation-delay: 0.5s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 1s;
+-moz-animation-delay:1s;
+animation-delay: 1s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 1.4s;
+-moz-animation-delay: 1.4s;
+animation-delay: 1.4s;
+}
 
