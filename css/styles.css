@@ -5603,6 +5603,10 @@ html {
   text-align: center;
   margin: 0;
 }
+.welcome.with-img-bg {
+  background: url(../img/loginBg.jpg) no-repeat center center;
+  background-size: cover;
+}
 .welcome section {
   padding-top: 20px;
 }
