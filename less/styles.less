@@ -18,13 +18,10 @@
 @white-divider:                  rgba(255,255,255,.12);
 @white-subtitle:                 rgba(255,255,255,.70);
 
-
 @brand-primary: @accent-color;
 
 @zindex-sub-navbar:       900;
-
 @font-size-base:          13px;
-
 
 @btn-default-color:              #fff;
 @btn-default-bg:                 transparent;
@@ -60,11 +57,9 @@ body{
   font-size: @font-size-h6;
  }
 
-
 section, footer{
   padding: 20px 0;
 }
-
 
 
 //Login ==================================================================
@@ -114,8 +109,7 @@ html{height: 100%;}
     @media (min-width: @screen-sm-min) {
       display: inline;
       width: auto;
-    }
-    
+    }    
     
   } //btn 
 
@@ -161,17 +155,15 @@ html{height: 100%;}
       visibility: visible;
     }
   }
-  
-
 }
 
 
 .content-box{
-    padding: @grid-gutter-width/2;
-    border-radius: 2px;
-    border: 1px solid @gray-divider;
-    box-shadow: 0 0 5px @gray-divider;
-    background: #fff;
+  padding: @grid-gutter-width/2;
+  border-radius: 2px;
+  border: 1px solid @gray-divider;
+  box-shadow: 0 0 5px @gray-divider;
+  background: #fff;
 }
 
 //app-list ==================================================================
@@ -180,7 +172,6 @@ html{height: 100%;}
 
 .app-library {
   @media (min-width: @screen-sm-min){
-
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -189,20 +180,20 @@ html{height: 100%;}
   -webkit-flex-flow: row wrap;
   justify-content: left;
   margin-left: -@grid-gutter-width;
-}
+  flex-direction: row;
+  flex-wrap: wrap;
+  }
 
 }
 
 .app-col {
-  
   @media (min-width: @screen-sm-min){
-    width: 25%;
+    width: 25%!important;
     padding-left: @grid-gutter-width;
   }
   @media (min-width: @screen-md-min){
     width: 33.33333%;
   }
-
 }
 
 
@@ -235,8 +226,6 @@ html{height: 100%;}
     margin-bottom: @grid-gutter-width;
   }
 }
-
-
 
 
 
@@ -441,9 +430,6 @@ footer{
     }
   }
 }
-
-
-
 
 
 

@@ -5708,11 +5708,13 @@ html {
     -webkit-flex-flow: row wrap;
     justify-content: left;
     margin-left: -30px;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 @media (min-width: 768px) {
   .app-col {
-    width: 25%;
+    width: 25%!important;
     padding-left: 30px;
   }
 }
