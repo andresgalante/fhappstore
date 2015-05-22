@@ -94,24 +94,53 @@ html{height: 100%;}
     padding: 20px 0 0px 0;
     margin: 20px;
   }//h5
+
+
+
+  form{
+    @media (min-width: @screen-sm-min) {
+    display: inline-block;
+    }    
+    
+  }
+  
+  .login-tools{
+    text-align: left;
+    margin-top: 15px;
+    p {
+      float: right;
+      
+    } 
+  }
   
   button{
-    .btn-lg;
-    margin: 0 5px 10px 5px;
     display: block;
     width: 100%;
-    i{
-      margin-right: 5px;
-    }
-    &:hover{border: 1px solid #fff;}
-    
-    
     @media (min-width: @screen-sm-min) {
       display: inline;
       width: auto;
     }    
     
   } //btn 
+  
+
+//  button{
+//    .btn-lg;
+//    margin: 0 5px 10px 5px;
+//    display: block;
+//    width: 100%;
+//    i{
+//      margin-right: 5px;
+//    }
+//    &:hover{border: 1px solid #fff;}
+//    
+//    
+//    @media (min-width: @screen-sm-min) {
+//      display: inline;
+//      width: auto;
+//    }    
+//    
+//  } //btn 
 
 }
 

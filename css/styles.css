@@ -5626,20 +5626,21 @@ html {
   padding: 20px 0 0px 0;
   margin: 20px;
 }
+@media (min-width: 768px) {
+  .welcome form {
+    display: inline-block;
+  }
+}
+.welcome .login-tools {
+  text-align: left;
+  margin-top: 15px;
+}
+.welcome .login-tools p {
+  float: right;
+}
 .welcome button {
-  padding: 10px 16px;
-  font-size: 17px;
-  line-height: 1.33;
-  border-radius: 6px;
-  margin: 0 5px 10px 5px;
   display: block;
   width: 100%;
-}
-.welcome button i {
-  margin-right: 5px;
-}
-.welcome button:hover {
-  border: 1px solid #fff;
 }
 @media (min-width: 768px) {
   .welcome button {
