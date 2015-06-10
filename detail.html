@@ -72,7 +72,6 @@
                    </div><!-- responsive hidden sm -->
 
 
-
                    <div class="hidden-xss">
                     <h5>Support:</h5>
                     <ul>
@@ -159,12 +158,76 @@
 
           <div class="col-sm-3 side-info hidden-xs">
             <div class="install-info">
-             <h3>Get the app</h3>
-             <div class="qr"><img src="img/qr.png" alt="qr"></div>
+              <h3>Get the app</h3>
+ 
+ 
+              <!-- Lucas: If just one app, show this -->
+              <div class="qr">
+                <img src="img/qr.png" alt="qr">
+              </div>
+              <h5 class="hidden-xs hidden-sm"><a href="#">http://downloadurl.com/9s7s</a></h5>
+              <p class="hidden-lg hidden-md">
+                <button type="button" class="btn btn-primary btn-block">
+                  <i class="fa fa-cloud-download"></i> 
+                  Install
+                </button>
+              </p>
+            <h5>Requierments:</h5>
+            <p>iOS 7,1+, Android 4 or Windows 2.</p>
+
+
+              <!-- Lucas: else show this -->
              
-             <h5 class="hidden-xs hidden-sm"><a href="#">http://downloadurl.com/9s7s</a></h5>             
-             
-             <p class="hidden-lg hidden-md"><button type="button" class="btn btn-primary btn-block"><i class="fa fa-cloud-download"></i> Install</button></p>
+            <h4>Android</h4>
+            <h5 class="hidden-xs hidden-sm"><a href="#">http://downloadurl.com/9s7s</a></h5>
+
+
+
+            <!-- Lucas: toggle click btn and image: click on the btn hide sthe btn and shows the QR code. when click on the QR image hide the image and shows the btn -->
+            <p>
+              <button class="btn btn-default btn-block">
+                <i class="fa fa-qrcode"></i> 
+                Get QR Code
+              </button>
+            </p>
+            
+            <div class="qr">
+              <img src="img/qr.png" alt="qr">
+            </div>
+            
+            
+              
+            <p class="hidden-lg hidden-md">
+              <button type="button" class="btn btn-primary btn-block">
+                <i class="fa fa-cloud-download"></i> 
+                Install                
+              </button>
+            </p>
+            <h5>Requierments:</h5>
+            <p>Android 4+</p>
+
+
+            <h4>iOS</h4>
+            <h5 class="hidden-xs hidden-sm"><a href="#">http://downloadurl.com/9s7s</a></h5>
+
+            <p>
+              <button class="btn btn-default btn-block">
+                <i class="fa fa-qrcode"></i> 
+                Get QR Code
+              </button>
+            </p>
+              
+            <p class="hidden-lg hidden-md">
+              <button type="button" class="btn btn-primary btn-block">
+                <i class="fa fa-cloud-download"></i> 
+                Install                
+              </button>
+            </p>
+            <h5>Requierments:</h5>
+            <p>iOS 7+</p>
+
+
+
              <!--
              <h5>Also avaliable on:</h5>
              <ul class="list-unstyled">
@@ -174,8 +237,6 @@
              </ul>
              -->
              
-             <h5>Requierments:</h5>
-             <p>iOS 7,1+, Android 4 or Windows 2.</p>
             
             </div><!-- install info -->
           </div><!-- col -->

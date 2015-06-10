@@ -2099,7 +2099,7 @@ select[multiple].form-group-lg .form-control {
 .btn:hover,
 .btn:focus,
 .btn.focus {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
 }
 .btn:active,
@@ -2120,9 +2120,9 @@ fieldset[disabled] .btn {
   box-shadow: none;
 }
 .btn-default {
-  color: #ffffff;
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.7);
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
 }
 .btn-default:hover,
 .btn-default:focus,
@@ -2130,9 +2130,9 @@ fieldset[disabled] .btn {
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(224, 224, 224, 0.7);
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
 }
 .btn-default:active,
 .btn-default.active,
@@ -2157,12 +2157,12 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: transparent;
-  border-color: rgba(255, 255, 255, 0.7);
+  background-color: #ffffff;
+  border-color: #cccccc;
 }
 .btn-default .badge {
-  color: transparent;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #333333;
 }
 .btn-primary {
   color: #ffffff;
@@ -2256,8 +2256,8 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -2266,8 +2266,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(224, 224, 224, 0.7);
 }
 .btn-info:active,
 .btn-info.active,
@@ -2292,11 +2292,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.7);
 }
 .btn-info .badge {
-  color: #5bc0de;
+  color: transparent;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -5916,14 +5916,6 @@ html {
     padding-right: 5px;
   }
 }
-.app-detail .side-info {
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  position: sticky;
-  top: 70px;
-}
 .app-detail .install-info {
   padding: 15px;
   border-radius: 2px;
@@ -5935,7 +5927,11 @@ html {
   margin-top: 0;
 }
 .app-detail .install-info h5 {
-  margin: 20px 0 5px 0;
+  margin: 10px 0 5px 0;
+}
+.app-detail .install-info h4 {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding-top: 20px;
 }
 .app-detail .install-info a {
   display: block;
