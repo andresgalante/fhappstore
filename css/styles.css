@@ -5566,6 +5566,27 @@ button.close {
   margin: 0;
   padding: 0;
 }
+.blank {
+  margin: 40px 0;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
+}
+.blank i {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+.loader {
+  background: rgba(0, 0, 0, 0.12);
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  padding: 10px 0;
+  z-index: 9999;
+}
 body {
   margin-top: 50px;
   color: rgba(0, 0, 0, 0.87);
